@@ -51,7 +51,7 @@ function setupWelcomeMessage(){
     curHours = Math.floor(curHours/6); // Simply dividing current hours by 6 proves to be a good enough aproximation.
     if (curHours == 4) curHours = 3;
     let welcome = "Good " + WELCOME_MESSAGE_TEMPLATE[curHours] + ", " + NAME;
-    document.getElementById("welcome-string").innerHTML = welcome;
+    //document.getElementById("welcome-string").innerHTML = welcome;
 }
 
 function setupGroups(){
@@ -109,8 +109,39 @@ function shortcutListener(e) {
     }
 }
 
+//RELOJ 
+
+var clock = new Vue({
+    el: '#clock',
+    data: {
+        time: '',
+        date: ''
+    }
+});
+
+var week = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+var timerID = setInterval(updateTime, 1000);
+
+updateTime();
+function updateTime() {
+    var cd = new Date();
+    clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
+   // clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
+    clock.date = week[cd.getDay()] + "   " +zeroPadding(cd.getDate(), 2) + "/" + zeroPadding(cd.getMonth()+1, 2) + "/" + zeroPadding(cd.getFullYear(), 4);
+};
+
+function zeroPadding(num, digit) {
+    var zero = '';
+    for(var i = 0; i < digit; i++) {
+        zero += '0';
+    }
+    return (zero + num).slice(-digit);
+}
+
+
 function main(){
-    setupWelcomeMessage();
+    //setupWelcomeMessage();
+    clock
     setupGroups();
     document.addEventListener('keyup', shortcutListener, false);
 }
