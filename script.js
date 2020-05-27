@@ -1,4 +1,4 @@
-const NAME = "John";
+const NAME = "Hypernought";
 const WELCOME_MESSAGE_TEMPLATE = ["night", "morning", "afternoon", "evening"];
 
 // All shortcuts are in a `SHORTCUT_STARTER+shortcutKey` format. 
@@ -14,27 +14,27 @@ const SHORTCUT_TIMEOUT = 1500;
 // but intended to be used with just regular latin letters.
 const MASTER_MAP = [
     {
-        "groupName": "Studies",
+        "groupName": "Series",
         "items":[
-            {"name": "Item A", "shortcutKey": "q", "url": "https://google.com/?q=q"},
-            {"name": "Item B", "shortcutKey": "w", "url": "https://google.com/?q=w"},
-            {"name": "Item C", "shortcutKey": "e", "url": "https://google.com/?q=e"}
+            {"name": "Emby", "shortcutKey": "q", "url": "http://app.emby.media/"},
+            {"name": "Sonarr", "shortcutKey": "w", "url": "http://localhost:8989/calendar"},
+            {"name": "Transmission", "shortcutKey": "e", "url": "http://localhost:9091/transmission/web/"}
         ]
     },
     {
         "groupName": "Work",
         "items":[
-            {"name": "Item D", "shortcutKey": "a", "url": "https://google.com/?q=a"},
-            {"name": "Item E", "shortcutKey": "s", "url": "https://google.com/?q=s"},
+            {"name": "Arch", "shortcutKey": "a", "url": "wiki.archlinux.org/"},
+            {"name": "Git", "shortcutKey": "s", "url": "https://github.com/hypernought/"},
             {"name": "Item F", "shortcutKey": "d", "url": "https://google.com/?q=d"}
         ]
     },
     {
         "groupName": "Personal",
         "items":[
-            {"name": "Item I", "shortcutKey": "z", "url": "https://google.com/?q=z"},
-            {"name": "Item J", "shortcutKey": "x", "url": "https://google.com/?q=x"},
-            {"name": "Item K", "shortcutKey": "c", "url": "https://google.com/?q=c"}
+            {"name": "Feedly", "shortcutKey": "z", "url": "https://feedly.com/i/my"},
+            {"name": "Gmail", "shortcutKey": "x", "url": "https://gmail.com"},
+            {"name": "Spotify", "shortcutKey": "c", "url": "https://open.spotify.com/"}
         ]
     }
 ]
