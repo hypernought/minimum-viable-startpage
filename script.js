@@ -26,7 +26,7 @@ const MASTER_MAP = [
         "items":[
             {"name": "Arch", "shortcutKey": "a", "url": "wiki.archlinux.org/"},
             {"name": "Git", "shortcutKey": "s", "url": "https://github.com/hypernought/"},
-            {"name": "Item F", "shortcutKey": "d", "url": "https://google.com/?q=d"}
+            {"name": "Godot", "shortcutKey": "d", "url": "https://docs.godotengine.org/en/stable/"}
         ]
     },
     {
